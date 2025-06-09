@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- 外圆 -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#c00" stroke-width="2"/>
+  
+  <!-- 内圆 -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="#c00" stroke-width="1.5"/>
+  
+  <!-- 五角星 -->
+  <path d="M100 30 L113 70 L155 70 L120 95 L135 135 L100 110 L65 135 L80 95 L45 70 L87 70 Z" fill="#c00"/>
+  
+  <!-- 上部文字 -->
+  <path id="upperText" d="M100,25 A75,75 0 0,1 175,100" fill="none" />
+  <text>
+    <textPath href="#upperText" startOffset="50%" text-anchor="middle" font-family="SimSun, serif" font-size="12" fill="#c00">北京大学</textPath>
+  </text>
+  
+  <!-- 下部文字 -->
+  <path id="lowerText" d="M100,175 A75,75 0 0,1 25,100" fill="none" />
+  <text>
+    <textPath href="#lowerText" startOffset="50%" text-anchor="middle" font-family="SimSun, serif" font-size="12" fill="#c00">招生办公室</textPath>
+  </text>
+  
+  <!-- 左侧文字 -->
+  <path id="leftText" d="M25,100 A75,75 0 0,1 100,25" fill="none" />
+  <text>
+    <textPath href="#leftText" startOffset="50%" text-anchor="middle" font-family="SimSun, serif" font-size="12" fill="#c00">PEKING</textPath>
+  </text>
+  
+  <!-- 右侧文字 -->
+  <path id="rightText" d="M175,100 A75,75 0 0,1 100,175" fill="none" />
+  <text>
+    <textPath href="#rightText" startOffset="50%" text-anchor="middle" font-family="SimSun, serif" font-size="12" fill="#c00">UNIVERSITY</textPath>
+  </text>
+</svg>

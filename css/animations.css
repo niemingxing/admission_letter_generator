@@ -1,0 +1,173 @@
+/* 动画效果样式文件 */
+
+/* 淡入上升动画 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* 浮动动画 */
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(-3deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(-3deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(-3deg);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* 闪烁动画 */
+@keyframes twinkle {
+    0% {
+        background-position: 0 0;
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        background-position: 100px 100px;
+        opacity: 0.5;
+    }
+}
+
+/* 脉冲动画 */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* 渐变背景动画 */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-gradient {
+    background: linear-gradient(-45deg, #1e40af, #1e3a8a, #3b82f6, #60a5fa);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* 打字机效果 */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #3b82f6 }
+}
+
+.animate-typing {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #3b82f6;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret 0.75s step-end infinite;
+}
+
+/* 旋转动画 */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-rotate {
+    animation: rotate 20s linear infinite;
+}
+
+/* 摇晃动画 - 用于通知书生成按钮 */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.animate-shake {
+    animation: shake 0.8s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* 闪光效果 - 用于按钮点击 */
+@keyframes flash {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0.5;
+    }
+}
+
+.animate-flash {
+    animation: flash 1s;
+}
+
+/* 放大缩小动画 */
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animate-scale {
+    animation: scale 2s ease-in-out infinite;
+}
+
+/* 页面滚动显示动画 */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
