@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="圆梦录取通知书 - 定制你的大学梦想">
+    <title>圆梦录取通知书 - 定制你的大学梦想</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <!-- 添加html2canvas库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- 导航栏 -->
+    <nav class="bg-blue-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-graduation-cap text-2xl"></i>
+                <span class="text-xl font-bold">圆梦录取通知书</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-yellow-300 transition duration-300">首页</a>
+                <a href="#features" class="hover:text-yellow-300 transition duration-300">功能介绍</a>
+                <a href="#create" class="hover:text-yellow-300 transition duration-300">制作通知书</a>
+                <a href="#gallery" class="hover:text-yellow-300 transition duration-300">作品展示</a>
+                <a href="#about" class="hover:text-yellow-300 transition duration-300">关于我们</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-blue-700 pb-4 px-4">
+            <a href="#home" class="block py-2 hover:text-yellow-300 transition duration-300">首页</a>
+            <a href="#features" class="block py-2 hover:text-yellow-300 transition duration-300">功能介绍</a>
+            <a href="#create" class="block py-2 hover:text-yellow-300 transition duration-300">制作通知书</a>
+            <a href="#gallery" class="block py-2 hover:text-yellow-300 transition duration-300">作品展示</a>
+            <a href="#about" class="block py-2 hover:text-yellow-300 transition duration-300">关于我们</a>
+        </div>
+    </nav>
+
+    <!-- 首页横幅 -->
+    <section id="home" class="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="stars"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in-up">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">定制你的<span class="text-yellow-300">大学梦想</span></h1>
+                    <p class="text-xl mb-8">创建专属于你的高考录取通知书，记录这人生中最重要的时刻</p>
+                    <div class="flex space-x-4">
+                        <a href="#create" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 flex items-center">
+                            <i class="fas fa-pencil-alt mr-2"></i> 立即制作
+                        </a>
+                        <a href="#features" class="bg-transparent border-2 border-white hover:border-yellow-300 hover:text-yellow-300 py-3 px-6 rounded-lg transition duration-300">
+                            <i class="fas fa-info-circle mr-2"></i> 了解更多
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 animate-float">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="大学录取通知书" class="rounded-lg shadow-2xl transform -rotate-3 max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9fafb" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+    </section>
+
+    <!-- 功能介绍 -->
+    <section id="features" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">功能介绍</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">我们提供简单易用的工具，帮助你创建专属的高考录取通知书</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 transform transition duration-500 hover:scale-105">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-magic text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">个性化定制</h3>
+                    <p class="text-gray-600">输入你的姓名、心仪大学和专业，生成专属于你的录取通知书</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 transform transition duration-500 hover:scale-105">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-share-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">一键分享</h3>
+                    <p class="text-gray-600">生成后可以一键分享到社交媒体，与朋友和家人共享你的喜悦</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 transform transition duration-500 hover:scale-105">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-download text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">高清下载</h3>
+                    <p class="text-gray-600">支持高清图片下载，可以打印出来珍藏或分享给亲朋好友</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 制作通知书 -->
+    <section id="create" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">制作你的录取通知书</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">填写以下信息，生成专属于你的高考录取通知书</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+                <div class="md:w-1/2 lg:w-2/5 order-2 md:order-1">
+                    <form id="admission-form" class="bg-gray-50 rounded-lg shadow-lg p-8 border border-gray-200">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">姓名</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="fas fa-user text-gray-400"></i>
+                                </div>
+                                <input type="text" id="name" name="name" class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="请输入你的姓名" required>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="university" class="block text-gray-700 font-medium mb-2">心仪大学</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="fas fa-university text-gray-400"></i>
+                                </div>
+                                <input type="text" id="university" name="university" class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="请输入你心仪的大学" required>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="major" class="block text-gray-700 font-medium mb-2">报考专业</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="fas fa-book text-gray-400"></i>
+                                </div>
+                                <input type="text" id="major" name="major" class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="请输入你的报考专业" required>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="template" class="block text-gray-700 font-medium mb-2">选择模板</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="fas fa-palette text-gray-400"></i>
+                                </div>
+                                <select id="template" name="template" class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option value="classic">经典红色</option>
+                                    <option value="modern">现代蓝色</option>
+                                    <option value="elegant">典雅金色</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 flex items-center justify-center">
+                            <i class="fas fa-magic mr-2"></i> 生成通知书
+                        </button>
+                    </form>
+                </div>
+                <div class="md:w-1/2 lg:w-2/5 order-1 md:order-2 mb-10 md:mb-0">
+                    <div id="preview" class="relative">
+                        <div class="admission-letter bg-white rounded-lg shadow-2xl p-8 border-8 border-red-700 transform rotate-2 max-w-md mx-auto">
+                            <div class="text-center mb-6">
+                                <div class="text-red-700 text-2xl font-bold mb-2">录取通知书</div>
+                                <div class="border-b-2 border-red-700 w-32 mx-auto"></div>
+                            </div>
+                            <div class="mb-6">
+                                <p class="text-gray-800"><span class="font-bold" id="preview-name">张三</span> 同学：</p>
+                                <p class="text-gray-800 mt-4">恭喜你被<span class="font-bold text-red-700" id="preview-university">北京大学</span>录取！</p>
+                                <p class="text-gray-800 mt-2">专业：<span class="font-bold" id="preview-major">计算机科学与技术</span></p>
+                                <p class="text-gray-800 mt-4">期待你的到来，共同开启人生新篇章！</p>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-gray-800 font-bold" id="preview-university-stamp">北京大学</div>
+                                <div class="text-gray-600 text-sm" id="preview-date">2023年7月10日</div>
+                            </div>
+                            <div class="absolute -right-4 -bottom-4 w-28 h-28 opacity-90">
+                                <img src="images/seal.svg" alt="大学印章" class="w-full h-full object-contain">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品展示 -->
+    <section id="gallery" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">作品展示</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">看看其他人制作的录取通知书</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="录取通知书样例1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">李明 - 清华大学</h3>
+                        <p class="text-gray-600">计算机科学与技术专业</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-sm text-gray-500">2023-07-08</span>
+                            <div class="flex space-x-2">
+                                <button class="text-blue-500 hover:text-blue-700">
+                                    <i class="fas fa-thumbs-up"></i> 128
+                                </button>
+                                <button class="text-red-500 hover:text-red-700">
+                                    <i class="fas fa-heart"></i> 56
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="录取通知书样例2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">王芳 - 复旦大学</h3>
+                        <p class="text-gray-600">金融学专业</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-sm text-gray-500">2023-07-05</span>
+                            <div class="flex space-x-2">
+                                <button class="text-blue-500 hover:text-blue-700">
+                                    <i class="fas fa-thumbs-up"></i> 98
+                                </button>
+                                <button class="text-red-500 hover:text-red-700">
+                                    <i class="fas fa-heart"></i> 42
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="录取通知书样例3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">张伟 - 浙江大学</h3>
+                        <p class="text-gray-600">机械工程专业</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-sm text-gray-500">2023-07-02</span>
+                            <div class="flex space-x-2">
+                                <button class="text-blue-500 hover:text-blue-700">
+                                    <i class="fas fa-thumbs-up"></i> 76
+                                </button>
+                                <button class="text-red-500 hover:text-red-700">
+                                    <i class="fas fa-heart"></i> 31
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300">
+                    <i class="fas fa-plus mr-2"></i> 查看更多
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">关于我们</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">我们致力于为高考学子提供美好的回忆</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0 pr-0 md:pr-10">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">我们的故事</h3>
+                    <p class="text-gray-600 mb-4">圆梦录取通知书项目源于一群大学生的创意。我们深知高考录取通知书对每个学生的重要意义，它不仅是十二年寒窗苦读的成果，更是人生新阶段的开始。</p>
+                    <p class="text-gray-600 mb-4">我们希望通过这个平台，让每个学生都能提前感受到被梦想大学录取的喜悦，也为那些正在为梦想奋斗的学子们提供一份动力。</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                            <i class="fab fa-weixin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                            <i class="fab fa-weibo text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                            <i class="fab fa-qq text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="团队照片" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-blue-900 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-graduation-cap text-2xl"></i>
+                        <span class="text-xl font-bold">圆梦录取通知书</span>
+                    </div>
+                    <p class="text-gray-400 max-w-md">创建专属于你的高考录取通知书，记录这人生中最重要的时刻</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">首页</a></li>
+                            <li><a href="#features" class="text-gray-400 hover:text-white transition duration-300">功能介绍</a></li>
+                            <li><a href="#create" class="text-gray-400 hover:text-white transition duration-300">制作通知书</a></li>
+                            <li><a href="#gallery" class="text-gray-400 hover:text-white transition duration-300">作品展示</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">联系我们</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-envelope text-gray-400"></i>
+                                <a href="mailto:contact@example.com" class="text-gray-400 hover:text-white transition duration-300">contact@example.com</a>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-phone text-gray-400"></i>
+                                <span class="text-gray-400">123-456-7890</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-span-2 md:col-span-1">
+                        <h3 class="text-lg font-semibold mb-4">订阅我们</h3>
+                        <p class="text-gray-400 mb-4">获取最新的通知书模板和活动信息</p>
+                        <form class="flex">
+                            <input type="email" placeholder="你的邮箱" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+                            <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 px-4 py-2 rounded-r-lg transition duration-300">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 圆梦录取通知书. 保留所有权利.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-weixin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-weibo"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-qq"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#fffaf0"/>
+  
+  <!-- 边框装饰 - 典雅金色双线 -->
+  <rect x="10" y="10" width="780" height="580" fill="none" stroke="#b8860b" stroke-width="2" rx="0" ry="0"/>
+  <rect x="20" y="20" width="760" height="560" fill="none" stroke="#b8860b" stroke-width="1" rx="0" ry="0"/>
+  
+  <!-- 角落装饰 - 古典花纹 -->
+  <g fill="#b8860b" opacity="0.8">
+    <!-- 左上角 -->
+    <path d="M10,10 C40,15 40,40 10,40 C15,10 40,10 40,40" stroke="#b8860b" stroke-width="1" fill="none"/>
+    <!-- 右上角 -->
+    <path d="M790,10 C760,15 760,40 790,40 C785,10 760,10 760,40" stroke="#b8860b" stroke-width="1" fill="none"/>
+    <!-- 左下角 -->
+    <path d="M10,590 C40,585 40,560 10,560 C15,590 40,590 40,560" stroke="#b8860b" stroke-width="1" fill="none"/>
+    <!-- 右下角 -->
+    <path d="M790,590 C760,585 760,560 790,560 C785,590 760,590 760,560" stroke="#b8860b" stroke-width="1" fill="none"/>
+  </g>
+  
+  <!-- 中央图案 - 典雅花纹 -->
+  <g opacity="0.1">
+    <!-- 中央花纹 -->
+    <path d="M400,150 C450,200 500,150 500,250 C500,350 450,300 400,350 C350,300 300,350 300,250 C300,150 350,200 400,150 Z" stroke="#b8860b" stroke-width="2" fill="none"/>
+    
+    <!-- 装饰线条 -->
+    <path d="M250,300 L550,300" stroke="#b8860b" stroke-width="1" stroke-dasharray="10,5"/>
+  </g>
+  
+  <!-- 花纹装饰 - 典雅卷曲 -->
+  <g opacity="0.15">
+    <!-- 左侧花纹 -->
+    <path d="M50,200 C80,220 80,240 50,260 C20,280 20,300 50,320 C80,340 80,360 50,380" stroke="#b8860b" stroke-width="2" fill="none"/>
+    
+    <!-- 右侧花纹 -->
+    <path d="M750,200 C720,220 720,240 750,260 C780,280 780,300 750,320 C720,340 720,360 750,380" stroke="#b8860b" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- 顶部装饰 - 典雅花纹 -->
+  <g opacity="0.7">
+    <path d="M350,50 C375,30 425,30 450,50" stroke="#b8860b" stroke-width="2" fill="none"/>
+    <path d="M375,70 C400,50 400,50 425,70" stroke="#b8860b" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <!-- 底部装饰 - 典雅花纹 -->
+  <g opacity="0.7">
+    <path d="M350,550 C375,570 425,570 450,550" stroke="#b8860b" stroke-width="2" fill="none"/>
+    <path d="M375,530 C400,550 400,550 425,530" stroke="#b8860b" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <!-- 四角装饰 - 典雅花纹 -->
+  <g opacity="0.6">
+    <path d="M50,50 L100,50 L100,100 L50,100 Z" stroke="#b8860b" stroke-width="1" fill="none"/>
+    <path d="M700,50 L750,50 L750,100 L700,100 Z" stroke="#b8860b" stroke-width="1" fill="none"/>
+    <path d="M50,500 L100,500 L100,550 L50,550 Z" stroke="#b8860b" stroke-width="1" fill="none"/>
+    <path d="M700,500 L750,500 L750,550 L700,550 Z" stroke="#b8860b" stroke-width="1" fill="none"/>
+  </g>
+</svg>
